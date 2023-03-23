@@ -67,23 +67,6 @@ CREATE TABLE `regtb` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `temptb`
---
-
-CREATE TABLE `temptb` (
-  `AssignmentName` varchar(250) NOT NULL,
-  `Regno` varchar(250) NOT NULL,
-  `FileName` varchar(250) NOT NULL,
-  `Regno1` varchar(250) NOT NULL,
-  `FileName1` varchar(250) NOT NULL,
-  `Similarity` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `assigntb`
 --
 ALTER TABLE `assigntb`
