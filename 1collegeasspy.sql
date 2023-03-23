@@ -64,9 +64,6 @@ CREATE TABLE `regtb` (
 -- Dumping data for table `regtb`
 --
 
-INSERT INTO `regtb` (`Regno`, `Name`, `Gender`, `Age`, `Email`, `Phone`, `Address`, `Degree`, `Department`, `Year`) VALUES
-('20UBC609', 'Sebastin Benadict Joshwa D', 'male', '20', 'joshwadsb@gmail.com', '8883166011', 'No. 438, Valayampatti, Sivagangai   District', 'bca', 'it', '3');
-
 -- --------------------------------------------------------
 
 --
