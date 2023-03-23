@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Assignment Management System</title>
+<style>
+body {
+background-image: linear-gradient(135deg,#71b7e6,#9b59b6);
+height: 200vh;
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+position: absolute;
+top:10px;
+right: 10px;
+}
+li {
+float: left;
+}
+button {
+background-color: white;
+border: none;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size:16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px;
+box-shadow: 2px 2px 2px light black;
+transition: all 0.3s ease-in-out;
+}
+button:hover{
+transform: scale(1.1);
+background-color: light grey;
+color: white;
+}
+h1 {
+text-align:center;
+font-size: 36px;
+text-shadow: 2px 2px 2px grey;
+border-radius: 10px;
+}
+a {
+text-decoration:none;
+}
+table {
+  width:100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin: top 20px;
+}
+th, td{
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+th {
+ background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><button><a href="/student">Home</a></button> </li>
+  <li><button><a href="/StudentAssignmentInfo">Assignment</a></button></li>
+  <li><button><a href="/StudentUploadInfo">AssignmentInfo</a></button></li>
+  <li><button><a href="/">Logout</a></button></li>
+</ul>
+<br><br><br><br><br><br>
+<h1>Assignment Information</h1>
+<br>
+<center>
+   <form action="/uploadassign" method="post" enctype="multipart/form-data">
+			    <p>&nbsp;</p>
+			    <table width="80%" border="0"  align="center">
+
+                  <tr>
+                    <th>Upload Assignment</th>
+                    <td><input name="fileupload" type="file" id="fileupload" /></td>
+                  </tr>
+                </table>
+			    <p>&nbsp;</p>
+			    <table width="80%" border="1" align="center">
+              <tr>
+                   <th><strong>Id</strong></div></th>
+                <th><strong>Assignment Name</strong></div></th>
+                <th><strong>Subject Name</strong></div></th>
+                <th><strong>Last Date</strong></div></th>
+                <th><strong>Degree</strong></div></th>
+                <th><strong>Department</strong></div></th>
+                <th><strong>Year</strong></div></th>
+                   <th><strong>Date</strong></div></th>
+                   <th><strong>D. No</strong></div></th>
+                   <th><strong>Status</strong></div></th>
+                   <th><strong>Upload</strong></th>
+
+              </tr>
+			  {% for item in data %}
+              <tr>
+                   <td><div align="center">{{item[0]}}</div></td>
+                <td><div align="center">{{item[1]}}</div></td>
+                <td><div align="center">{{item[2]}}</div></td>
+                <td><div align="center">{{item[3]}}</div></td>
+                <td><div align="center">{{item[4]}}</div></td>
+                <td><div align="center">{{item[5]}}</div></td>
+                    <td><div align="center">{{item[6]}}</div></td>
+                    <td><div align="center">{{item[7]}}</div></td>
+                    <td><div align="center">{{item[8]}}</div></td>
+                    <td><div align="center">{{item[10]}}</div></td>
+				   <input type="hidden" name="id" value="{{item[0]}}">
+				<td><input type="submit" id="btn1" value="Upload" /></td>
+
+              </tr>
+			  {% endfor %}
+            </table>
+</form></center>
+</body>
+</html>
